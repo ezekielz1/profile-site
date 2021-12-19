@@ -23,8 +23,7 @@ const items = [
             'css',
             'js',
         ],
-        url: "https://example.com",
-        gitURL: "https://example.com",
+        gitURL: "https://github.com/ezekielz1/save-switcher",
     },
     {
         images: [ozone_screen_1, ozone_screen_2, ozone_screen_3],
@@ -39,8 +38,7 @@ const items = [
             'css',
             'js',
         ],
-        url: "https://example.com",
-        gitURL: "https://example.com",
+        // gitURL: "https://example.com",
     },
     {
         title: "This Site",
@@ -54,7 +52,7 @@ const items = [
             'js'
         ],
         statusText: "Under Construction",
-        gitURL: "https://example.com"
+        gitURL: "https://github.com/ezekielz1/profile-site"
     }
 ]
 
