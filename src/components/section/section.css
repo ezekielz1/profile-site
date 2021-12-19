@@ -1,0 +1,31 @@
+.section {
+    display: flex;
+    width: 100vw;
+    margin: auto;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__title {
+    z-index: 2;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: var(--page-background-color);
+    box-shadow: 0 0 2em 2em var(--page-background-color);
+
+    z-index: 1;
+}
+
+@media screen and (min-width: 1080px){
+    .section {
+        width: 80vw;
+    }
+}

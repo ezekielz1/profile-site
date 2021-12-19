@@ -1,0 +1,61 @@
+@keyframes scroll-image {
+    from {background-position: 0% 0%;}
+    to {background-position: 100% 100%;}
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    position: relative;
+    width: 10em;
+    height: 10em;
+
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+    user-select: none;
+    transition: .25s transform;
+
+    animation: 10s scroll-image alternate infinite;
+}
+
+.gallery-item__overlay {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--gallery-overlay-background);
+    opacity: 0;
+
+    transition: .1s opacity ease-in-out;
+}
+
+.gallery-item:hover .gallery-item__overlay {
+    opacity: 1;
+}
+
+.gallery-item__text {
+    color: var(--gallery-text-color);
+    text-shadow: 0 0 0.5em var(--gallery-text-shadow);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .gallery-item:hover {
+        transform: scale(1.5);
+        z-index: 10;
+    }
+}

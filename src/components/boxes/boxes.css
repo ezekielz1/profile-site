@@ -1,0 +1,42 @@
+.boxes-container {
+    width: calc(10*3vmax);
+    height: calc(10*3vmax);
+    display: flex;
+
+    background-color: var(--page-background-color);
+    box-shadow: 0 0 2em 2em var(--page-background-color);
+
+    cursor: pointer;
+}
+
+.boxes-container * {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.boxes {
+
+    filter: drop-shadow(0 0vmax 0 var(--page-background-color)) invert(0);
+
+    user-select: none;
+
+    transition: .1s filter;
+
+    z-index: 1;
+}
+
+.boxes--invert {
+    filter: drop-shadow(0 0vmax 0 var(--page-background-color)) invert(1);
+}
+
+.boxes--drop-shadow {
+    filter: drop-shadow(0 1vmax 0 black) invert(0);
+}
+
+.boxes__box {
+    position: absolute;
+    width: 10vmax;
+    height: 10vmax;
+    background-color: var(--page-background-color);
+    transition: .5s transform ease-in-out;
+}
